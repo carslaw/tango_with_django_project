@@ -5,8 +5,10 @@ import django
 django.setup()
 from rango.models import Category, Page
 
+
 def populate():
 
+    # Dictionaries containing pages to go in different categories
     python_pages = [
     {"title": "Official Python Tutorial",
     "url": "http://docs.python.org/2/tutorial/"},
@@ -28,6 +30,7 @@ def populate():
     "url": "http://bottlepy.org/docs/dev/"},
     {"title": "Flask",
     "url": "http://flask.pocoo.org"}, ]
+
 
     # Categories for above pages
     cats = {"Python": {"pages": python_pages, "views": 128, "likes": 64},
